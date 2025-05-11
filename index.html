@@ -1,162 +1,181 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>مسابقه داستان ترسناک - Dark Benshi</title>
-  <style>
-    body {
-      font-family: Tahoma, sans-serif;
-      background-color: #000;
-      color: #eee;
-      padding: 20px;
-      direction: rtl;
-      background-image: url('A_promotional_web_page_for_a_Persian_horror_story_.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      backdrop-filter: brightness(0.5);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مسابقه داستان ترسناک - Dark Benshi</title>
+    <style>
+      body {
+        font-family: Tahoma, sans-serif;
+        background-color: #000;
+        color: #eee;
+        padding: 20px;
+        direction: rtl;
+        background-image: url("ChatGPT Image May 11, 2025, 07_15_02 AM.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        backdrop-filter: brightness(0.5);
+      }
 
-    h1, h2 {
-      text-align: center;
-      color: #ff1a1a;
-      text-shadow: 2px 2px 5px #000;
-    }
+      h1,
+      h2 {
+        text-align: center;
+        color: #ff1a1a;
+        text-shadow: 2px 2px 5px #000;
+      }
 
-    p {
-      text-align: center;
-      color: #ccc;
-    }
+      p {
+        text-align: center;
+        color: #ccc;
+      }
 
-    form {
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 15px #ff1a1a;
-    }
+      form {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 15px #ff1a1a;
+      }
 
-    label {
-      display: block;
-      margin-top: 10px;
-    }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
 
-    input, textarea, button {
-      width: 100%;
-      margin-top: 5px;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      font-size: 1rem;
-      background-color: #222;
-      color: #fff;
-    }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        background-color: #222;
+        color: #fff;
+      }
 
-    button {
-      background-color: #b30000;
-      color: white;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background-color 0.3s, transform 0.3s;
-    }
+      button {
+        background-color: #b30000;
+        color: white;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
 
-    button:hover {
-      background-color: #ff1a1a;
-      transform: scale(1.05);
-      box-shadow: 0 0 10px #ff1a1a;
-    }
+      button:hover {
+        background-color: #ff1a1a;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #ff1a1a;
+      }
 
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      color: #ccc;
-      font-style: italic;
-    }
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #ccc;
+        font-style: italic;
+      }
 
-    .message {
-      text-align: center;
-      margin-top: 20px;
-      color: #66ff66;
-      font-weight: bold;
-    }
+      .message {
+        text-align: center;
+        margin-top: 20px;
+        color: #66ff66;
+        font-weight: bold;
+      }
 
-    #loading {
-      display: none;
-      text-align: center;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #ffcc00;
-    }
-  </style>
-</head>
-<body>
+      #loading {
+        display: none;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #ffcc00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>داستان ترسناک واقعی خود را برای ما بفرستید</h1>
 
-  <h1>داستان ترسناک واقعی خود را برای ما بفرستید</h1>
+    <form id="scaryForm">
+      <label for="name">نام شما (اختیاری):</label>
+      <input type="text" name="name" id="name" placeholder="مثلاً سایه‌ی شب" />
 
-  <form id="scaryForm">
-    <label for="name">نام شما (اختیاری):</label>
-    <input type="text" name="name" id="name" placeholder="مثلاً سایه‌ی شب" />
+      <label for="email">ایمیل شما (برای ارتباط با شما - اختیاری):</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="مثلاً example@gmail.com"
+      />
 
-    <label for="email">ایمیل شما (برای ارتباط با شما - اختیاری):</label>
-    <input type="email" name="email" id="email" placeholder="مثلاً example@gmail.com" />
+      <label for="story">داستان ترسناک:</label>
+      <textarea
+        name="story"
+        id="story"
+        rows="10"
+        required
+        placeholder="داستانتو بنویس... ولی حواست باشه کسی نخونه!"
+      ></textarea>
 
-    <label for="story">داستان ترسناک:</label>
-    <textarea name="story" id="story" rows="10" required placeholder="داستانتو بنویس... ولی حواست باشه کسی نخونه!"></textarea>
+      <label
+        ><input type="checkbox" name="contest" value="yes" /> شرکت در مسابقه
+        داستان‌نویسی برای دریافت جایزه ۲۰۰ هزار تومانی</label
+      >
 
-    <label><input type="checkbox" name="contest" value="yes"> شرکت در مسابقه داستان‌نویسی برای دریافت جایزه ۲۰۰ هزار تومانی</label>
+      <button type="submit">ارسال داستان</button>
+    </form>
 
-    <button type="submit">ارسال داستان</button>
-  </form>
+    <div id="loading">⏳ در حال ارسال داستان...</div>
 
-  <div id="loading">⏳ در حال ارسال داستان...</div>
+    <div class="message" id="responseMessage"></div>
 
-  <div class="message" id="responseMessage"></div>
+    <div class="footer" id="footerQuote">
+      خوشحال می‌شویم داستان ماورایی خود را با ما به اشتراک بگذارید و ری‌اکت
+      کنیم.
+    </div>
 
-  <div class="footer" id="footerQuote">
-    خوشحال می‌شویم داستان ماورایی خود را با ما به اشتراک بگذارید و ری‌اکت کنیم.
-  </div>
+    <script>
+      const form = document.getElementById("scaryForm");
+      const message = document.getElementById("responseMessage");
+      const footerQuote = document.getElementById("footerQuote");
+      const loading = document.getElementById("loading");
 
-  <script>
-    const form = document.getElementById('scaryForm');
-    const message = document.getElementById('responseMessage');
-    const footerQuote = document.getElementById('footerQuote');
-    const loading = document.getElementById('loading');
+      const quotes = [
+        "از پشت سر صداش اومد...",
+        "در قفل بود... ولی کسی داشت وارد می‌شد!",
+        "ساعت ۳ شب بود، دوباره اون سایه برگشت...",
+        "چراغا خاموش شد، ولی صدای قدم‌ها ادامه داشت...",
+        "پنجره بسته بود... پس کی اون بیرون بود؟",
+      ];
+      footerQuote.innerText = quotes[Math.floor(Math.random() * quotes.length)];
 
-    const quotes = [
-      "از پشت سر صداش اومد...",
-      "در قفل بود... ولی کسی داشت وارد می‌شد!",
-      "ساعت ۳ شب بود، دوباره اون سایه برگشت...",
-      "چراغا خاموش شد، ولی صدای قدم‌ها ادامه داشت...",
-      "پنجره بسته بود... پس کی اون بیرون بود؟"
-    ];
-    footerQuote.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        loading.style.display = "block";
+        message.innerText = "";
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      loading.style.display = 'block';
-      message.innerText = '';
-
-      const formData = new FormData(form);
-      fetch('https://formspree.io/f/movdndvy', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        loading.style.display = 'none';
-        if (response.ok) {
-          message.innerText = "✅ داستانت رسید... حالا نوبت ماست که یه شب خوب برات رقم بزنیم 👻";
-          form.reset();
-        } else {
-          message.innerText = "❌ خطا در ارسال! لطفاً دوباره تلاش کن.";
-        }
-      }).catch(() => {
-        loading.style.display = 'none';
-        message.innerText = "⚠️ ارتباط با سرور قطع شد!";
+        const formData = new FormData(form);
+        fetch("https://formspree.io/f/movdndvy", {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        })
+          .then((response) => {
+            loading.style.display = "none";
+            if (response.ok) {
+              message.innerText =
+                "✅ داستانت رسید... حالا نوبت ماست که یه شب خوب برات رقم بزنیم 👻";
+              form.reset();
+            } else {
+              message.innerText = "❌ خطا در ارسال! لطفاً دوباره تلاش کن.";
+            }
+          })
+          .catch(() => {
+            loading.style.display = "none";
+            message.innerText = "⚠️ ارتباط با سرور قطع شد!";
+          });
       });
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
